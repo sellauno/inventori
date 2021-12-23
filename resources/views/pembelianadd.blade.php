@@ -3,20 +3,20 @@
 @section('pagetitle', 'Pembelian')
 @section('sidebar')
 <li class="nav-item">
-    <a class="nav-link collapsed" href="dashboard">
+    <a class="nav-link collapsed" href="/dashboard">
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
     </a>
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#components-nav" href="barang">
+    <a class="nav-link collapsed" data-bs-target="#components-nav" href="/barang">
         <i class="bi bi-menu-button-wide"></i><span>Barang</span></i>
     </a>
 </li><!-- End Barang Nav -->
 
 <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#icons-nav" href="aksesoris">
+    <a class="nav-link collapsed" data-bs-target="#icons-nav" href="/aksesoris">
         <i class="bi bi-gem"></i><span>Aksesoris</span>
     </a>
 </li><!-- End Aksesoris Nav -->
@@ -28,7 +28,7 @@
         <h5 class="card-title">Form Tambah Data</h5>
 
         <!-- Horizontal Form -->
-        <form action="pembelian/create" method="post">
+        <form action="/pembelian/create" method="post">
             @csrf
             <?php if ($id != null) { ?>
                 <input type="hidden" name="id_produksi" value="{{$id}}">

@@ -3,20 +3,20 @@
 @section('pagetitle', 'Aksesoris')
 @section('sidebar')
 <li class="nav-item">
-    <a class="nav-link collapsed" href="dashboard">
+    <a class="nav-link collapsed" href="/dashboard">
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
     </a>
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#components-nav" href="barang">
+    <a class="nav-link collapsed" data-bs-target="#components-nav" href="/barang">
         <i class="bi bi-menu-button-wide"></i><span>Barang</span></i>
     </a>
 </li><!-- End Barang Nav -->
 
 <li class="nav-item">
-    <a class="nav-link " data-bs-target="#icons-nav" href="aksesoris">
+    <a class="nav-link " data-bs-target="#icons-nav" href="/aksesoris">
         <i class="bi bi-gem"></i><span>Aksesoris</span>
     </a>
 </li><!-- End Aksesoris Nav -->
@@ -28,7 +28,7 @@
         <h5 class="card-title">Form Tambah Data</h5>
 
         <!-- Horizontal Form -->
-        <form action="aksesoris/create" method="post">
+        <form action="/aksesoris/create" method="post">
             @csrf
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
@@ -45,7 +45,7 @@
             <div class="text-center">
                 <button type="submit" class="btn btn-primary">Simpan</button>
                 <button type="reset" class="btn btn-secondary">Reset</button>
-                <a href="aksesoris"><button type="button" class="btn btn-danger">Cancel</button></a>
+                <a href="/aksesoris"><button type="button" class="btn btn-danger">Cancel</button></a>
 
             </div>
         </form><!-- End Horizontal Form -->
