@@ -3,20 +3,20 @@
 @section('pagetitle', 'Order')
 @section('sidebar')
 <li class="nav-item">
-    <a class="nav-link " href="/dashboard">
+    <a class="nav-link " href="dashboard">
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
     </a>
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#components-nav" href="/barang">
+    <a class="nav-link collapsed" data-bs-target="#components-nav" href="barang">
         <i class="bi bi-menu-button-wide"></i><span>Barang</span></i>
     </a>
 </li><!-- End Barang Nav -->
 
 <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#icons-nav" href="/aksesoris">
+    <a class="nav-link collapsed" data-bs-target="#icons-nav" href="aksesoris">
         <i class="bi bi-gem"></i><span>Aksesoris</span>
     </a>
 </li><!-- End Aksesoris Nav -->
@@ -28,7 +28,7 @@
         <h5 class="card-title">Form Tambah Data</h5>
 
         <!-- Horizontal Form -->
-        <form action="/order/create" method="post">
+        <form action="order/create" method="post">
             @csrf
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Tanggal</label>

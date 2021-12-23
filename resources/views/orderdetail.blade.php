@@ -3,20 +3,20 @@
 @section('pagetitle', 'Order Detail')
 @section('sidebar')
 <li class="nav-item">
-  <a class="nav-link " href="/dashboard">
+  <a class="nav-link " href="dashboard">
     <i class="bi bi-grid"></i>
     <span>Dashboard</span>
   </a>
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-  <a class="nav-link collapsed" data-bs-target="#components-nav" href="/barang">
+  <a class="nav-link collapsed" data-bs-target="#components-nav" href="barang">
     <i class="bi bi-menu-button-wide"></i><span>Barang</span></i>
   </a>
 </li><!-- End Barang Nav -->
 
 <li class="nav-item">
-  <a class="nav-link collapsed" data-bs-target="#icons-nav" href="/aksesoris">
+  <a class="nav-link collapsed" data-bs-target="#icons-nav" href="aksesoris">
     <i class="bi bi-gem"></i><span>Aksesoris</span>
   </a>
 </li><!-- End Aksesoris Nav -->
@@ -42,7 +42,7 @@
       </div>
       <br>
       <div class="d-flex align-items-center">
-        <a href="/export/{{$order->id_order}}"><button type="button" class="btn btn-primary">Cetak Laporan</button></a>
+        <a href="export/{{$order->id_order}}"><button type="button" class="btn btn-primary">Cetak Laporan</button></a>
       </div>
       <br><br>
       <div class="d-flex align-items-center">
@@ -69,18 +69,18 @@
             <td>{{$row->first_qty}}</td>
             <td>{{$row->qty}}</td>
             <td>{{$row->reject_qty}}</td>
-            <!-- <td><a href="/pembelian/add/{{$row->id_produksi}}">
+            <!-- <td><a href="pembelian/add/{{$row->id_produksi}}">
                 <i class="bi bi-plus-circle"></i>
               </a></td> -->
 
             <td>
-              <a href="/hasilproduksi/delete/{{$row->id_produksi}}">
+              <a href="hasilproduksi/delete/{{$row->id_produksi}}">
                 <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
               </a>
-              <a href="/hasilproduksi/edit/{{$row->id_produksi}}">
+              <a href="hasilproduksi/edit/{{$row->id_produksi}}">
                 <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
               </a>
-              <a href="/hasilproduksi/detail/{{$row->id_produksi}}/{{$row->id_barang}}">
+              <a href="hasilproduksi/detail/{{$row->id_produksi}}/{{$row->id_barang}}">
                 <button type="button" class="btn btn-outline-warning btn-sm">Lihat</button>
               </a>
             </td>
@@ -90,7 +90,7 @@
       </table>
       <!-- End Table with stripped rows -->
       <div class="d-flex align-items-center">
-        <h6><a href="/hasilproduksi/add/{{$order->id_order}}">
+        <h6><a href="hasilproduksi/add/{{$order->id_order}}">
             <i class="bi bi-plus-circle"></i>
           </a></h6>
         <div class="ps-3">

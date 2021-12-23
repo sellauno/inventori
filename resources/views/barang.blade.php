@@ -3,20 +3,20 @@
 @section('pagetitle', 'Barang')
 @section('sidebar')
 <li class="nav-item">
-  <a class="nav-link collapsed" href="/dashboard">
+  <a class="nav-link collapsed" href="dashboard">
     <i class="bi bi-grid"></i>
     <span>Dashboard</span>
   </a>
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-  <a class="nav-link " data-bs-target="#components-nav" href="/barang">
+  <a class="nav-link " data-bs-target="#components-nav" href="barang">
     <i class="bi bi-menu-button-wide"></i><span>Barang</span></i>
   </a>
 </li><!-- End Barang Nav -->
 
 <li class="nav-item">
-  <a class="nav-link collapsed" data-bs-target="#icons-nav" href="/aksesoris">
+  <a class="nav-link collapsed" data-bs-target="#icons-nav" href="aksesoris">
     <i class="bi bi-gem"></i><span>Aksesoris</span>
   </a>
 </li><!-- End Aksesoris Nav -->
@@ -52,10 +52,10 @@
           <td>{{$row->warna}}</td>
           <td>{{$row->detail}}</td>
           <td>
-            <a href="/barang/delete/{{$row->id_barang}}">
+            <a href="barang/delete/{{$row->id_barang}}">
               <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
             </a>
-            <a href="/barang/edit/{{$row->id_barang}}">
+            <a href="barang/edit/{{$row->id_barang}}">
               <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
             </a>
           </td>
