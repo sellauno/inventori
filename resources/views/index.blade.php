@@ -25,7 +25,7 @@
 @section('content')
 <div class="card-body">
   <div class="card-title">
-    <a href="{{ route('orderadd' }}">
+    <a href="{{ route('orderadd') }}">
       <button type="button" class="btn btn-primary">Tambah Data</button>
     </a>
   </div>
