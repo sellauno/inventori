@@ -3,20 +3,20 @@
 @section('pagetitle', 'Pembelian')
 @section('sidebar')
 <li class="nav-item">
-  <a class="nav-link collapsed" href="dashboard">
+  <a class="nav-link collapsed" href="{{ route('dashboard') }}">
     <i class="bi bi-grid"></i>
     <span>Dashboard</span>
   </a>
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-  <a class="nav-link collapsed" data-bs-target="#components-nav" href="barang">
+  <a class="nav-link collapsed" data-bs-target="#components-nav" href="{{ route('barang') }}">
     <i class="bi bi-menu-button-wide"></i><span>Barang</span></i>
   </a>
 </li><!-- End Barang Nav -->
 
 <li class="nav-item">
-  <a class="nav-link collapsed" data-bs-target="#icons-nav" href="aksesoris">
+  <a class="nav-link collapsed" data-bs-target="#icons-nav" href="{{ route('aksesoris') }}">
     <i class="bi bi-gem"></i><span>Aksesoris</span>
   </a>
 </li><!-- End Aksesoris Nav -->
@@ -26,7 +26,7 @@
 <div class="card">
   <div class="card-body">
     <div class="card-title">
-      <a href="pembelian/add">
+      <a href="{{ route('pembelianadd') }}">
         <button type="button" class="btn btn-primary">Tambah Data</button>
       </a>
     </div>
@@ -56,10 +56,10 @@
           <td>{{$row->jml_pembelian}}</td>
           <td>{{$row->total_harga}}</td>
           <td>
-            <a href="pembelian/delete/{{$row->id_pembelian}}">
+            <a href="{{ route('pembeliandelete', ['id' => $row->id_pembelian]) }}">
               <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
             </a>
-            <a href="pembelian/edit/{{$row->id_pembelian}}">
+            <a href="{{ route('pembelianedit', ['id' => $row->id_pembelian]) }}">
               <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
             </a>
           </td>

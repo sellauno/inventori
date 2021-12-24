@@ -3,14 +3,14 @@
 @section('pagetitle', 'Hasil Produksi')
 @section('sidebar')
 <li class="nav-item">
-  <a class="nav-link collapsed" href="dashboard">
+  <a class="nav-link collapsed" href="{{ route('dashboard') }}">
     <i class="bi bi-grid"></i>
     <span>Dashboard</span>
   </a>
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-  <a class="nav-link collapsed" data-bs-target="#components-nav" href="barang">
+  <a class="nav-link collapsed" data-bs-target="#components-nav" href="{{ route('barang') }}">
     <i class="bi bi-menu-button-wide"></i><span>Barang</span></i>
   </a>
 </li><!-- End Barang Nav -->
@@ -28,7 +28,7 @@
 </li><!-- End Produksi Nav -->
 
 <li class="nav-item">
-  <a class="nav-link collapsed" data-bs-target="#icons-nav" href="aksesoris">
+  <a class="nav-link collapsed" data-bs-target="#icons-nav" href="{{ route('aksesoris') }}">
     <i class="bi bi-gem"></i><span>Aksesoris</span>
   </a>
 </li><!-- End Aksesoris Nav -->
@@ -38,7 +38,7 @@
 <div class="card">
   <div class="card-body">
     <div class="card-title">
-      <a href="hasilproduksi/add">
+      <a href="{{ route('hasilproduksiadd'}}">
         <button type="button" class="btn btn-primary">Tambah Data</button>
       </a>
     </div>
@@ -58,7 +58,7 @@
       <tbody>
         <?php $no = 0; ?>
         @foreach($produksi as $row)
-        <a href="barang">
+        <a href="{{ route('barang') }}">
           <tr>
             <th scope="row"><?php $no++;
                             echo $no; ?></th>
@@ -68,13 +68,13 @@
             <td>{{$row->qty}}</td>
             <td>{{$row->reject_qty}}</td>
             <td>
-              <a href="hasilproduksi/delete/{{$row->id_produksi}}">
+              <a href="{{ route('hasilproduksidelete', ['id' => $row->id_produksi]) }}">
                 <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
               </a>
-              <a href="hasilproduksi/edit/{{$row->id_produksi}}">
+              <a href="{{ route('hasilproduksiedit', ['id' => $row->id_produksi]) }}">
                 <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
               </a>
-              <a href="hasilproduksi/detail/{{$row->id_produksi}}">
+              <a href="{{ route('hasilproduksidetail', ['id' => $row->id_produksi]) }}">
                 <button type="button" class="btn btn-outline-warning btn-sm">Lihat</button>
               </a>
             </td>

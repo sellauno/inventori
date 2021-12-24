@@ -10,7 +10,7 @@
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-    <a class="nav-link " data-bs-target="#components-nav" href="/barang">
+    <a class="nav-link " data-bs-target="#components-nav" href="{{ route('barang') }}">
         <i class="bi bi-menu-button-wide"></i><span>Barang</span></i>
     </a>
 </li><!-- End Barang Nav -->
@@ -28,7 +28,7 @@
         <h5 class="card-title">Form Tambah Data</h5>
 
         <!-- Horizontal Form -->
-        <form action="/barang/create" method="post">
+        <form action="{{ route('barangcreate'}}" method="post">
             @csrf
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
@@ -59,7 +59,7 @@
             <div class="text-center">
                 <button type="submit" class="btn btn-primary">Simpan</button>
                 <button type="reset" class="btn btn-secondary">Reset</button>
-                <a href="/barang"><button type="button" class="btn btn-danger">Cancel</button></a>
+                <a href="{{ route('barang') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
 
             </div>
         </form><!-- End Horizontal Form -->
