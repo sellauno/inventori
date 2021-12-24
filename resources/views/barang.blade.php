@@ -26,7 +26,7 @@
 <div class="card">
   <div class="card-body">
     <div class="card-title">
-      <a href="{{ route('barangadd'}}">
+      <a href="{{ route('barangadd')}}">
         <button type="button" class="btn btn-primary">Tambah Data</button>
       </a>
     </div>
@@ -55,7 +55,7 @@
             <a href="{{ route('barangdelete', ['id' => $row->id_barang]) }}">
               <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
             </a>
-            <a href="{{ route('barangedit, ['id' => $row->id_barang]) }}">
+            <a href="{{ route('barangedit', ['id' => $row->id_barang]) }}">
               <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
             </a>
           </td>

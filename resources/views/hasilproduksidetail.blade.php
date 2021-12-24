@@ -90,7 +90,7 @@
         ?>
 
         <div class="d-flex align-items-center">
-            <h6><a href="{{ route('pembelianadd', ['id' => $produksi->id_produksi], ['brg' => $produksi->id_barang], ['acc' => $kbt->id_aksesoris], ['no' => $no+=1]) }}">
+            <h6><a href="{{ route('pembelianadd', ['id' => $produksi->id_produksi, 'brg' => $produksi->id_barang, 'acc' => $kbt->id_aksesoris, 'no' => $no+=1]) }}">
                     <i class="bi bi-plus-circle"></i>
                 </a></h6>
             <div class="ps-3">

@@ -80,7 +80,7 @@
               <a href="{{ route('hasilproduksiedit', ['id' => $row->id_produksi]) }}">
                 <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
               </a>
-              <a href="{{ route('hasilproduksidetail', ['id' => $row->id_barang]) }}">
+              <a href="{{ route('hasilproduksidetail', ['id' => $row->id_produksi, 'idbrg' => $row->id_barang]) }}">
                 <button type="button" class="btn btn-outline-warning btn-sm">Lihat</button>
               </a>
             </td>
@@ -97,35 +97,6 @@
           Tambah Data
         </div>
       </div>
-
-      <!--  <br><br>
-      <h6>Pembelian</h6>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">No</th>
-            <th scope="col">Tanggal</th>
-            <th scope="col">Barang</th>
-            <th scope="col">Aksesoris</th>
-            <th scope="col">Jumlah</th>
-            <th scope="col">Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php $no = 0; ?>
-          @foreach($pembelian as $row)
-          <tr>
-            <th scope="row"><?php $no++;
-                            echo $no; ?></th>
-            <td>{{$row->tgl_pembelian}}</td>
-            <td>{{$row->nama_barang}} ({{$row->warna}})</td>
-            <td>{{$row->nama_aksesoris}}</td>
-            <td>{{$row->jml_pembelian}}</td>
-            <td>{{$row->total_harga}}</td>
-          </tr>
-          @endforeach
-        </tbody>
-      </table>  -->
     </div>
   </div>
 

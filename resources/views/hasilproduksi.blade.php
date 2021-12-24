@@ -38,7 +38,7 @@
 <div class="card">
   <div class="card-body">
     <div class="card-title">
-      <a href="{{ route('hasilproduksiadd'}}">
+      <a href="{{ route('hasilproduksiadd'])}}">
         <button type="button" class="btn btn-primary">Tambah Data</button>
       </a>
     </div>
@@ -74,7 +74,7 @@
               <a href="{{ route('hasilproduksiedit', ['id' => $row->id_produksi]) }}">
                 <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
               </a>
-              <a href="{{ route('hasilproduksidetail', ['id' => $row->id_produksi]) }}">
+              <a href="{{ route('hasilproduksidetail', ['id' => $row->id_produksi, 'idbrg' => $row->id_barang]) }}">
                 <button type="button" class="btn btn-outline-warning btn-sm">Lihat</button>
               </a>
             </td>

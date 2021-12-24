@@ -28,7 +28,7 @@
         <h5 class="card-title">Form Tambah Data</h5>
 
         <!-- Horizontal Form -->
-        <form action="{{ route('aksesoriscreate'}}" method="post">
+        <form action="{{ route('aksesoriscreate')}}" method="post">
             @csrf
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>

@@ -44,7 +44,7 @@ Route::get('/pembelian/add', 'PembelianController@add');
 Route::post('/pembelian/create', 'PembelianController@create')->name('pembeliancreate');
 Route::get('/pembelian/edit/{id}', 'PembelianController@edit')->name('pembelianedit');
 Route::post('/pembelian/update/{id}', 'PembelianController@update')->name('pembelianupdate');
-Route::get('/pembelian/delete/{id}', 'PembelianController@delete')->name('pemebliandelete');
+Route::get('/pembelian/delete/{id}', 'PembelianController@delete')->name('pembeliandelete');
 
 Route::get('/hasilproduksi/add', 'HasilProduksiController@add');
 Route::post('/hasilproduksi/create', 'HasilProduksiController@create')->name('hasilproduksicreate');
